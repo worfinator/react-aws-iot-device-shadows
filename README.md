@@ -66,7 +66,7 @@ AWSIot.init();
 AWSIot.publish('yourTopic', 'Hello world');
 ```
 
-Add any logic you wish to perform on a message to the processEvent(event) callback or specify your own callback function. Data can then be store within the class for access in a parent module.
+Add any logic you wish to perform on a message to the 1processEvent(event)` callback or specify your own callback function within the `this.clent.setCallback()` function. Data can then be store within the class for access in a parent module.
 
 <a name="api"></a>
 ## API Documentation
