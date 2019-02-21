@@ -1,6 +1,6 @@
 # aws-iot-device-sdk-js-react-native
 
-React Class wrapper for connecting to AWS IoT from a device using SDK JavaScript bundle ported from JamesJara's React Native Component
+React Class wrapper for connecting to AWS IoT from a device using SDK JavaScript bundle ported from [JamesJara's React Native Component](https://www.npmjs.com/package/react-native-aws-iot-device-shadows)
 
 Allows developers to use the AWS IOT shadow support from a React class.
 
