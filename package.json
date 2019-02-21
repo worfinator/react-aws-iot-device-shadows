@@ -1,0 +1,32 @@
+{
+  "name": "react-aws-iot-device-shadows",
+  "version": "1.0.3",
+  "description": "React Component for connecting to AWS IoT from a device using SDK JavaScript bundle. Ported from jamesjara's React Native module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worfinator/react-aws-iot-device-shadows.git"
+  },
+  "author": "Mark Baldwin -markbaldwin.nz@gmail.com",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/worfinator/native-aws-iot-device-shadows/issues"
+  },
+  "homepage": "https://github.com/worfinator/react-aws-iot-device-shadows#readme",
+  "dependencies": {
+    "aws-iot-device-sdk": "*",
+    "aws-sdk": "^2.407.0",
+    "randomatic": "^3.1.1",
+    "uglify-js": "^3.0.28",
+    "webpack": "^2.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.18.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}
