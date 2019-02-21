@@ -6,11 +6,10 @@ Allows developers to use the AWS IOT shadow support from a React class.
 
 - [Overview](#overview)
 - [Installation](#install)
-- [Examples](#examples)
+- [Example](#example)
 - [API Documentation](#api)
 - [Connection Types](#connections)
 - [AWS bundle](#bundle)
-- [Debugging mode](#debug)
 - [Unit Tests](#unittests)
 - [License](#license)
 - [Support](#support)
@@ -49,6 +48,25 @@ Installing with npm:
 npm install react-aws-iot-device-shadows
 ```
 
+## Example
+
+[./example/awsIOT.js](./example/awsIOT.js) - React Class example to serve as a Data Service within a React Application.
+
+```js
+import AWSIot from "./example/awsIOT";
+
+/* 
+   Initialise service object, creates a
+   connection and subscribes to topics 
+*/
+AWSIot.init();
+
+// Publish a message to topic
+AWSIot.publish('yourTopic', 'Hello world');
+```
+
+Add any logic you wish to perform on a message to the `processEvent(event)` callback or specify your own callback function within the `this.clent.setCallback()` function. Data can then be store within the class for access in a parent module.
+
 <a name="api"></a>
 ## API Documentation
 
@@ -66,28 +84,15 @@ npm install react-aws-iot-device-shadows
 
 ## Connection Types
 
-This react native component only supports one type of connections to the AWS IoT platform:
+This react component only supports one type of connections to the AWS IoT platform:
 
 - MQTT over WebSocket/TLS with SigV4 authentication using port 443
-
-<a name="debug"></a>
-
-## Debug
-
-The enable debug mode for display logging information just pass a object with debug:true
-
-```js
-<AWSIoTMQTT
-    config={debug:true}
-    ...
-/>
-```
 
 <a name="bundle"></a>
 
 ## Re-Creating the bundle with webpack
 
-This IOT JS SDK is packaged with[webpack](https://webpack.js.org/), because currently there is not official support for AWS IOT react native. This is already bundle it for you using the last version.
+This IOT JS SDK is packaged with[webpack](https://webpack.js.org/), because currently there is not official support for AWS IOT react. This is already bundle it for you using the last version.
 
 ```sh
 npm run build
