@@ -6,7 +6,7 @@ Allows developers to use the AWS IOT shadow support from a React class.
 
 - [Overview](#overview)
 - [Installation](#install)
-- [Examples](#examples)
+- [Example](#example)
 - [API Documentation](#api)
 - [Connection Types](#connections)
 - [AWS bundle](#bundle)
@@ -48,6 +48,25 @@ Installing with npm:
 ```sh
 npm install react-aws-iot-device-shadows
 ```
+
+## Example
+
+[./example/awsIOT.js](./example/awsIOT.js) - React Class example to serve as a Data Service within a React Application.
+
+```js
+import AWSIot from "./example/awsIOT";
+
+/* 
+   Initialise service object, creates a
+   connection and subscribes to topics 
+*/
+AWSIot.init();
+
+// Publish a message to topic
+AWSIot.publish('yourTopic', 'Hello world'
+```
+
+Add any logic you wish to perform on a message to the processEvent(event) callback or specify your own callback function. Data can then be store within the class for access in a parent module.
 
 <a name="api"></a>
 ## API Documentation
